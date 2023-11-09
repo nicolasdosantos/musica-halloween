@@ -1,0 +1,13 @@
+.play{
+    background: linear-gradient(180deg, black 39%, #3F0040 87%);
+    height: 54px;
+}
+
+
+.play i{
+    color: white;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+}
