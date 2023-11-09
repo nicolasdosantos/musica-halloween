@@ -13,12 +13,11 @@ function Play(props){
             setBotao(<i className="fa-solid fa-pause"></i>)
         }
     }
+
     return(
         <div className={style.play}>
             <div>
-                <button><i className="fa-solid fa-backward"></i></button>
                 <button onClick={tocar}>{botao}</button>
-                <button><i className="fa-solid fa-forward"></i></button>
             </div>
         </div>
     )
