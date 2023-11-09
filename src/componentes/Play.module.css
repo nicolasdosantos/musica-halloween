@@ -11,3 +11,11 @@
     text-align: center;
     padding: 15px;
 }
+
+
+.play button{
+    background-color: #FF9A00;
+    color: black;
+    border: 2px solid black;
+    margin-top: 2px;
+}
