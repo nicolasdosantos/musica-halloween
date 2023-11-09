@@ -1,7 +1,14 @@
 import style from "./Main.module.css"
+import {useState} from "react";
+import Card from "./Card";
 
 
-function Main(){
+function Main(props){
+    const [playlist, setPlaylist] = useState([])
+    function addPlaylist(nome){
+        setPlaylist([...playlist, nome])
+    }
+
     return(
         <div className={style.main}>
             <div>
@@ -14,20 +21,24 @@ function Main(){
 
                     <div >
                         <div className={style.musicas}>
-                            <p>Nome da musica</p>
-                            <button>+</button>
+                            <p>Tumbalacatumba</p>
+                            <button onClick={()=>addPlaylist("/caveirasTumba.mp3")}>+</button>
                         </div>
                         <div className={style.musicas}>
-                            <p>Nome da musica</p>
-                            <button>+</button>
+                            <p>Spooky Scary Skeletons</p>
+                            <button onClick={()=>addPlaylist("/SpookyScarySkeletons.mp3")}>+</button>
                         </div>
                         <div className={style.musicas}>
-                            <p>Nome da musica</p>
-                            <button>+</button>
+                            <p>Five Nights at freddy's theme</p>
+                            <button onClick={()=>addPlaylist("/Fnaf.mp3")}>+</button>
                         </div>
                         <div className={style.musicas}>
-                            <p>Nome da musica</p>
-                            <button>+</button>
+                            <p>It's Halloween</p>
+                            <button onClick={()=>addPlaylist("/ItsHalloweenFirstOfOctober.mp3")}>+</button>
+                        </div>
+                        <div className={style.musicas}>
+                            <p>Coraline Theme</p>
+                            <button onClick={()=>addPlaylist("/CoralineTheme.mp3")}>+</button>
                         </div>
                     </div>
                 </div>
@@ -44,33 +55,7 @@ function Main(){
                             <p>Embarque na magia sombria com nossa playlist de Halloween: arrepios garantidos!</p>
                         </div>
                     </div>
-                    <div className={style.play}>
-                        <p>Nome da musica</p>
-                        <button>
-                            <i className="fa-solid fa-play"></i>
-                        </button>
-                        <button>
-                            <i className="fa-solid fa-trash"></i>
-                        </button>
-                    </div>
-                    <div className={style.play}>
-                        <p>Nome da musica</p>
-                        <button>
-                            <i className="fa-solid fa-play"></i>
-                        </button>
-                        <button>
-                            <i className="fa-solid fa-trash"></i>
-                        </button>
-                    </div>
-                    <div className={style.play}>
-                        <p>Nome da musica</p>
-                        <button>
-                            <i className="fa-solid fa-play"></i>
-                        </button>
-                        <button>
-                            <i className="fa-solid fa-trash"></i>
-                        </button>
-                    </div>
+                    {playlist.map((item)=><Card item={item} setMusica={props.setMusica} musica={props.musica}></Card>)}
                 </div>
             </div>
         </div>
