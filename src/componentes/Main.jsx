@@ -48,7 +48,7 @@ function Main(props){
                 <div className={style.playlist}>
                     <div className={style.capa}>
                         <div>
-                            <img src="/capa.svg" />
+                            <img src="/SkeletonsScarryGif.gif" />
                         </div>
                         <div >
                             <h2>Minha playlist assustadora</h2>

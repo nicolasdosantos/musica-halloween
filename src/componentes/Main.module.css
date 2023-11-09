@@ -11,6 +11,10 @@
     border-radius: 10px;
 }
 
+.main img{
+    padding-top: 10px;
+    height: 250px;
+}
 
 .musica{
     display: flex;
